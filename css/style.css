@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Roboto&display=swap');
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+/* VARIABLES */
+
+:root {
+    /* FONTS */
+    --HEADFONT: 'Caveat', cursive;
+    --BODYFONT: 'Roboto', sans-serif;
+
+    /* COLOURS */
+    --C1: black;
+    --C2: whitesmoke;
+    --C3: #22577A;
+    --C4: #38A3A5;
+    --C5: #57CC99;
+    --C6: #80ED99;
+    --C7: #C7F9CC;
+
+    /* PADDING & MARGIN */
+    --PAD: 0.25rem;
+}
+
+/* UTILITY CLASSES */
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+/* MAIN STYLES */
+
+body {
+    font-family: var(--BODYFONT);
+    background-color: var(--C5);
+}
+
+.header, 
+.footer {
+    background-color: var(--C5);
+    color: var(--C1);
+    padding: var(--PAD);
+}
+
+.header {
+    font-family: var(--HEADFONT);
+    font-size: 1.5rem;
+}
+
+.footer {
+    position:absolute;
+    bottom: 0;
+    min-width: 100%;
+}
+
+.indexMain {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+}
+
+.indexMain_img {
+    z-index: -1;
+}
+
+.indexMain_form {
+    display: flex;
+    flex-flow: column nowrap;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+
+    border: solid var(--C1) 2px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px var(--C1);
+
+    background-color: var(--C3);
+    color: var(--C2);
+}
+
+.indexMain_form label,
+.indexMain_form input {
+    padding: var(--PAD);
+    magrin: 0.1rem 0;
+    border-radius: 5px;
+}
+
+.indexMain_form button {
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: var(--PAD);
+    background-color: var(--C3);
+    color: var(--C2);
+    border: solid var(--C2) 2px;
+    border-radius: 5px;
+}
+
+.indexMain_form button:hover,
+.indexMain_form button:focus {
+    background-color: var(--C2);
+    color: var(--C3);
+}
+
+.indexMain_form button:active {
+    transform: scale(0.98); 
+}
+
+.indexMain_form a {
+    text-align: center;
+    font-size: small;
+    padding: 0.25rem;
+    margin-top: 1rem;
+    color: var(--C2);
+    opacity: 0.5;
+}
+
+.indexMain_form a:hover,
+.indexMain_form a:focus,
+.indexMain_form a:active {
+    opacity: 1;
+}

@@ -11,22 +11,57 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <h1>Knockaveeley</h1>
-        <nav>
-            <a href="">House Info</a>
-            <a href="">Area Info</a>
+        <nav class="header_nav">
+            <a href="housebok.html"><img src="Images/favicon.png" alt="Outline map of ireland" width="32" height="32" class="header_img">House Info</a>
+            <a href="areabok.html"><img src="Images/ireland.png" alt="Outline map of ireland" width="512" height="512" class="header_img">Area Guide</a>
         </nav>
     </header>
 
-    <main>
+    <main class="contentPages">
 
-        <img src="Images/CoraghPatrickSunRise.JPG" alt="Sunrise over Croagh Patrick" width="4032" height="3024">
-
-        <section>
+        <div class="hero">  
+            <h2>Welcome</h2>
+            <img src="Images/CoraghPatrickSunRise.JPG" alt="Sunrise over Croagh Patrick" width="4032" height="3024" class="hero_Img">
+        </div>
+        
+        <section class="bookings">
             <h2>Bookings</h2>
-            <p>Upcoming bookings</p>
-            <p>Make a booking</p>
+            
+            <h3>Upcoming Bookings</h3>
+
+            <table id="bookingsTable">
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Days</th>
+                    <th>Who</th>
+                    <th># Rooms</th>
+                </tr>
+                <tr>
+                    <td data-cell="From">01/01/2024</td>
+                    <td data-cell="To">10/01/2024</td>
+                    <td data-cell="Days">10</td>
+                    <td data-cell="Who">Barry & Dorothy</td>
+                    <td data-cell="Rooms">2</td>
+                </tr>
+            </table>
+
+            <h3>Make a booking</h3>
+
+            <div id="bookingForm" class="booking_form">
+                <label for="from">From</label>
+                <input type="date" name="from" id="from" required>
+                <label for="to">To</label>
+                <input type="date" name="to" id="to" required>
+                <label for="who">Who</label>
+                <input type="text" name="who" id="who" required>
+                <label for="rooms"># Rooms</label>
+                <input type="number" name="rooms" id="rooms" required>
+                <button onClick="addBooking()">Add</button>
+                <button onClick="clearForm()">Clear</button>
+            </div>
         </section>
 
         <section>
@@ -36,10 +71,12 @@
 
     </main>
 
-    <footer>
-        <a href="">Back to top</a>
+    <footer class="footer">
+        <a href="#">Back to top</a>
         <p>Chris Rothrie &copy</p>
     </footer>
+
+    <script src="/JS/home.js"></script>
 </body>
 
 </html>

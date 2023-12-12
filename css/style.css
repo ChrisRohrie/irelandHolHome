@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:wght@400;500;700&display=swap');
 
 /* RESET */
 
@@ -36,8 +36,10 @@ textarea {
     --C6: #80ED99;
     --C7: #C7F9CC;
 
-    /* PADDING & MARGIN */
+    /* PADDING & MARGIN & BORDERS */
     --PAD: 0.25rem;
+    --BR1: 5px;
+    --BR2: 10px;
 }
 
 /* UTILITY CLASSES */
@@ -73,15 +75,75 @@ body {
 }
 
 .header {
+    display: flex;
+    justify-content: space-between;
     font-family: var(--HEADFONT);
     font-size: 1.5rem;
 }
 
+.header_nav {
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.header_nav a {
+    display: flex;
+    text-decoration: none;
+    font-weight: bolder;
+    padding: var(--PAD);
+    font-family: var(--BODYFONT);
+    color: var(--C1);
+    max-width: 18%;
+}
+
+.header_nav a:hover,
+.header_nav a:focus {
+    text-decoration: underline;
+    color: var(--C3);
+}
+
+.header_img {
+    position:relative;
+    min-width: 20px;
+    max-width: 5%;
+    object-fit: contain;
+}
+
 .footer {
-    position:absolute;
+    position:sticky;
     bottom: 0;
     min-width: 100%;
+    text-align: center;
 }
+
+.contentPages {
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+}
+
+.hero_Img {
+    position: relative;
+    max-height: 50vh;
+    max-width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero h2 {
+    position: absolute;
+    color: var(--C2);
+    text-shadow: 2px 2px 5px var(--C1);
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-family: var(--HEADFONT);
+}
+
+/* PAGE STYLES */
 
 .indexMain {
     display: flex;
@@ -91,6 +153,9 @@ body {
 
 .indexMain_img {
     z-index: -1;
+    max-height: 80vh;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .indexMain_form {
@@ -104,7 +169,7 @@ body {
     padding: 1rem;
 
     border: solid var(--C1) 2px;
-    border-radius: 5px;
+    border-radius: var(--BR1);
     box-shadow: 2px 2px 5px var(--C1);
 
     background-color: var(--C3);
@@ -115,7 +180,7 @@ body {
 .indexMain_form input {
     padding: var(--PAD);
     magrin: 0.1rem 0;
-    border-radius: 5px;
+    border-radius: var(--BR1);
 }
 
 .indexMain_form button {
@@ -125,7 +190,7 @@ body {
     background-color: var(--C3);
     color: var(--C2);
     border: solid var(--C2) 2px;
-    border-radius: 5px;
+    border-radius: var(--BR1);
 }
 
 .indexMain_form button:hover,
@@ -151,4 +216,60 @@ body {
 .indexMain_form a:focus,
 .indexMain_form a:active {
     opacity: 1;
+}
+
+.bookings {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: var(--PAD);
+}
+
+.bookings h2,
+.bookings h3 {
+    color: var(--C3);
+    padding: var(--PAD);
+}
+
+.bookings h3 {
+    margin-bottom: 0.5rem;
+}
+
+.bookings th {
+    font-weight: bold;
+}
+
+.bookings table,
+.bookings td,
+.bookings th {
+    border-collapse: collapse;
+    text-align: center;
+    background-color: var(--C7);
+    padding: var(--PAD);
+}
+
+.bookings table {
+    border-radius: var(--BR2);
+    margin-bottom: var(--PAD);
+    box-shadow: 2px 2px 5px var(--C1);
+}
+
+.bookings th {
+    border-bottom: dashed var(--C3) 1px;
+    border-radius: var(--BR2);
+}
+
+.bookings td,
+.bookings th {
+    border-right: dashed var(--C3) 1px;
+}
+
+.bookings td:last-child,
+.bookings th:last-child {
+    border-right: none;
+    border-radius: var(--BR2);
+}
+
+.bookings td:first-child {
+    border-radius: var(--BR2);
 }

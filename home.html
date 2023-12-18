@@ -22,7 +22,7 @@
     <main class="contentPages">
 
         <div class="hero">  
-            <h2>Welcome</h2>
+            <!-- <h2>Welcome</h2> -->
             <img src="Images/CoraghPatrickSunRise.JPG" alt="Sunrise over Croagh Patrick" width="4032" height="3024" class="hero_Img">
         </div>
         
@@ -39,29 +39,22 @@
                     <th>Who</th>
                     <th># Rooms</th>
                 </tr>
-                <tr>
-                    <td data-cell="From">01/01/2024</td>
-                    <td data-cell="To">10/01/2024</td>
-                    <td data-cell="Days">10</td>
-                    <td data-cell="Who">Barry & Dorothy</td>
-                    <td data-cell="Rooms">2</td>
-                </tr>
             </table>
 
             <h3>Make a booking</h3>
 
-            <div id="bookingForm" class="booking_form">
+            <form id="bookingForm" class="booking_form">
                 <label for="from">From</label>
-                <input type="date" name="from" id="from" required>
+                <input type="date" name="from" id="from">
                 <label for="to">To</label>
-                <input type="date" name="to" id="to" required>
+                <input type="date" name="to" id="to">
                 <label for="who">Who</label>
-                <input type="text" name="who" id="who" required>
+                <input type="text" name="who" id="who">
                 <label for="rooms"># Rooms</label>
-                <input type="number" name="rooms" id="rooms" required placeholder="1-5">
+                <input type="number" name="rooms" id="rooms" placeholder="Max of 5 rooms">
                 <button onClick="addBooking()">Add</button>
                 <button onClick="clearForm()">Clear</button>
-            </div>
+            </form>
         </section>
 
         <section>
